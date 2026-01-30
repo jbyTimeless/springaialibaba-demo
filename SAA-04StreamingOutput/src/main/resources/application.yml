@@ -1,0 +1,13 @@
+server:
+  port: 8004
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+spring:
+  application:
+    name: SAA-04StreamingOutput
+  ai:
+    dashscope:
+      api-key: ${aliQwen-api}

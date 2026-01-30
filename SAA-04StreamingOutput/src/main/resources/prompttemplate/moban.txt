@@ -1,0 +1,1 @@
+将一个关于{topic}的故事，并按照{output_format}格式输出，字数在{word_count}左右。
