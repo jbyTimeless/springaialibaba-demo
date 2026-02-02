@@ -15,6 +15,7 @@
         <module>SAA-03ChatModelChatClient</module>
         <module>SAA-05Persistent</module>
         <module>SAA-06PersistentMySQL</module>
+        <module>SAA-07Text2voice</module>
     </modules>
 
     <properties>

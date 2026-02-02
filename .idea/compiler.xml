@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SAA-01HelloWorld" />
+        <module name="SAA-07Text2voice" />
+        <module name="SAA-03ChatModelChatClient" />
         <module name="SAA-02Ollama" />
         <module name="SAA-05Persistent" />
-        <module name="SAA-01HelloWorld" />
         <module name="SAA-06PersistentMySQL" />
-        <module name="SAA-03ChatModelChatClient" />
         <module name="SAA-04StreamingOutput" />
       </profile>
     </annotationProcessing>
