@@ -1,0 +1,32 @@
+server:
+  port: 8008
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+spring:
+  application:
+    name: SAA-08Embed2vector
+  ai:
+    dashscope:
+      api-key: ${aliQwen-api}
+      chat:
+        options:
+          model: qwen-plus
+      embedding:
+        options:
+          model: text-embedding-v3
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      username: default
+      password:
+
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
+    org.springframework.jdbc: DEBUG
+    com.mysql.cj: DEBUG
+    root: INFO

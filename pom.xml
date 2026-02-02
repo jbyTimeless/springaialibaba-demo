@@ -16,6 +16,7 @@
         <module>SAA-05Persistent</module>
         <module>SAA-06PersistentMySQL</module>
         <module>SAA-07Text2voice</module>
+        <module>SAA-08Embed2vector</module>
     </modules>
 
     <properties>
