@@ -39,8 +39,7 @@ public class RedisConfig {
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         objectMapper.activateDefaultTyping(
                 LaissezFaireSubTypeValidator.instance,
-                ObjectMapper.DefaultTyping.NON_FINAL
-        );
+                ObjectMapper.DefaultTyping.NON_FINAL);
 
         StringRedisSerializer stringSerializer = new StringRedisSerializer();
 
@@ -52,5 +51,6 @@ public class RedisConfig {
         template.afterPropertiesSet();
         return template;
     }
+
 
 }
