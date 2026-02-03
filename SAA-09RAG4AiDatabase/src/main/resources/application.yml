@@ -38,6 +38,7 @@ spring:
         initialize-schema: true
         index-name: custom-index
         prefix: custom-prefix
+        dimensions: 1024
   data:
     redis:
       host: localhost
