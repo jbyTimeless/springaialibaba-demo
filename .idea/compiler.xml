@@ -12,6 +12,7 @@
         <module name="SAA-03ChatModelChatClient" />
         <module name="SAA-02Ollama" />
         <module name="SAA-05Persistent" />
+        <module name="SAA-09RAG4AiDatabase" />
         <module name="SAA-06PersistentMySQL" />
         <module name="SAA-04StreamingOutput" />
       </profile>
@@ -24,6 +25,7 @@
       <module name="SAA-05Persistent" options="-parameters" />
       <module name="SAA-06PersistentMySQL" options="-parameters" />
       <module name="SAA-08Embed2vector" options="-parameters" />
+      <module name="SAA-09RAG4AiDatabase" options="-parameters" />
     </option>
   </component>
 </project>
