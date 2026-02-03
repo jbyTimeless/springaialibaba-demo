@@ -17,6 +17,11 @@ spring:
       embedding:
         options:
           model: text-embedding-v3
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: custom-index
+        prefix: custom-prefix
   data:
     redis:
       host: localhost
