@@ -28,9 +28,8 @@ import java.util.List;
 @Component
 public class JacksonConfig {
 
-    @Bean
-    @Primary
-    public ObjectMapper objectMapper() {
+    @Bean("chatMemoryObjectMapper")
+    public ObjectMapper chatMemoryObjectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
 
         // 1. 核心模块注册

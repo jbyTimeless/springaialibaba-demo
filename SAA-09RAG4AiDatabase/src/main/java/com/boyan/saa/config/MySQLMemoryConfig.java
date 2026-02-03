@@ -2,6 +2,7 @@ package com.boyan.saa.config;
 
 import com.boyan.saa.repository.MySQLChatMemoryRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -28,7 +29,8 @@ public class MySQLMemoryConfig {
      * 注册MySQL聊天记忆仓库
      */
     @Bean
-    public MySQLChatMemoryRepository mysqlChatMemoryRepository(JdbcTemplate jdbcTemplate, ObjectMapper objectMapper) {
+    public MySQLChatMemoryRepository mysqlChatMemoryRepository(JdbcTemplate jdbcTemplate, 
+                                                                @Qualifier("chatMemoryObjectMapper") ObjectMapper objectMapper) {
         return new MySQLChatMemoryRepository(jdbcTemplate, objectMapper);
     }
 }
