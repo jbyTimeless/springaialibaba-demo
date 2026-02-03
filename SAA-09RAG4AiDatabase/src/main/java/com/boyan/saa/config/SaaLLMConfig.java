@@ -66,7 +66,7 @@ public class SaaLLMConfig {
     //加入mysql记忆化的qwen聊天
     @Bean("qwenMysqlMemoryClient")
     public ChatClient qwenMysqlMemoryClient(@Qualifier("qwen") ChatModel qwen,
-                                       MySQLChatMemoryRepository mysqlChatMemoryRepository
+                                            @Qualifier("mysqlChatMemoryRepository")  MySQLChatMemoryRepository mysqlChatMemoryRepository
     ) {
         MessageWindowChatMemory windowChatMemory = MessageWindowChatMemory.builder()
                 .chatMemoryRepository(mysqlChatMemoryRepository)
