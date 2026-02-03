@@ -20,12 +20,12 @@ import java.util.List;
 @Configuration
 public class InitVectorDatabaseConfig {
     private static final Logger log = LoggerFactory.getLogger(InitVectorDatabaseConfig.class);
-    
+
     @jakarta.annotation.Resource
     private VectorStore vectorStore;
 
     @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Value("classpath:ops.txt")
     private Resource opsFile;
@@ -35,7 +35,6 @@ public class InitVectorDatabaseConfig {
 
         TextReader textReader = new TextReader(opsFile);
         textReader.setCharset(Charset.defaultCharset());
-
 
         List<Document> list = new TokenTextSplitter().transform(textReader.read());
 
@@ -47,11 +46,9 @@ public class InitVectorDatabaseConfig {
         Boolean retFlag = redisTemplate.opsForValue().setIfAbsent(redisKey, "1");
         if (Boolean.TRUE.equals(retFlag)) {
             vectorStore.add(list);
-        }else{
+        } else {
             log.info("skip add vector store");
         }
-
-
 
     }
 }
