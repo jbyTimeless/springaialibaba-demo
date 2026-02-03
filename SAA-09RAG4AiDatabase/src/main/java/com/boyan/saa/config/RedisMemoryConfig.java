@@ -4,6 +4,7 @@ import com.alibaba.cloud.ai.memory.redis.RedisChatMemoryRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class RedisMemoryConfig {
@@ -15,6 +16,7 @@ public class RedisMemoryConfig {
     private Integer port;
 
     @Bean
+    @Primary
     public RedisChatMemoryRepository redisChatMemoryRepository() {
         return RedisChatMemoryRepository.builder()
                 .host( host)
